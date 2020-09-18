@@ -23,7 +23,7 @@ var htmlMenuAddition = '<div id="farRightColumn" class="column">' +
 
 '<button id="autoSteel" style="color:red" onclick="autoSwitch(3, \'autoSteel\')"> Auto Craft Steel </button>' +
 '<label id="autoSteelLabel">Craft % </label>' +
-'<span id="autoSteelSpan" title="Between 0 and 100"><input id="autoSteelText" type="text" style="width:25px" onchange="resource[3][3] = this.value/100" value="30"></span></br></br>' +
+'<span id="autoSteelSpan" title="Between 0 and 100"><input id="autoSteelText" type="text" style="width:25px" onchange="resources[3][3] = this.value/100" value="30"></span></br></br>' +
 
 '</div>' +
 '</div>'
