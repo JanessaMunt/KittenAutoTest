@@ -18,7 +18,7 @@ $("#footerLinks").append(htmlMenuAddition);
 function autoSwitch(varName) {
 	if (craftSteel == "false") {
 		craftSteel = "true";
-		gamePage.msg('Auto' + craft Steel + ' is now on');
+		gamePage.msg('Auto' + 'craft Steel' + ' is now on');
 		document.getElementById(varName).style.color = 'black';
 	} else if (craftSteel == "true") {
 		craftSteel = "false";
