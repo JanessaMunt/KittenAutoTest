@@ -45,7 +45,7 @@ function autoSwitch(resNum, varName) {
 
 //autocraft steel
 function autoCraft(){
-	for(int i=0; i < resources.length; i++) { //cycle through all resources
+	for(var i=0; i < resources.length; i++) { //cycle through all resources
 		var curRes = gamePage.resPool.get(resources[i][0]); //get current amount of resource
 		var resourcePerSec = resourcePerTick * 5; //get resources per second
 	  if(resources[i][4] == true && curRes> (gamePage.resPool.get(resources[i][0]).maxValue - resourcePerSec)){ //check if autocraft is on & if resource is going to hit cap soon
