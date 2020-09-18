@@ -18,12 +18,12 @@ var htmlMenuAddition = '<div id="farRightColumn" class="column">' +
 $("#footerLinks").append(htmlMenuAddition);
 
 function autoSwitch(varName) {
-	if (craftSteel == "false") {
-		craftSteel = "true";
+	if (craftSteel == false) {
+		craftSteel = true;
 		gamePage.msg('Auto' + 'craft Steel' + ' is now on');
 		document.getElementById(varName).style.color = 'black';
-	} else if (craftSteel == "true") {
-		craftSteel = "false";
+	} else if (craftSteel == true) {
+		craftSteel = false;
 		gamePage.msg('Auto' + 'craft Steel' + ' is now off');
 		document.getElementById(varName).style.color = 'red';
 	}
