@@ -1,10 +1,13 @@
-var craftSteel = false
+function selectOptions() {
+	$("#optionSelect").toggle();
+};
+
+var craftSteel = false;
 var htmlMenuAddition = '<div id="farRightColumn" class="column">' +
 
 '<a id="scriptOptions" onclick="selectOptions()"> | testscript </a>' +
 
 '<div id="optionSelect" style="display:none; margin-top:-400px; margin-left:-100px; width:200px" class="dialog help">' +
-'<a href="#" onclick="clearOptionHelpDiv();" style="position: absolute; top: 10px; right: 15px;">close</a>' +
 
 
 '<button id="autoCraft" style="color:red" onclick="autoSwitch(\'autoCraft\')"> Auto Craft Steel </button>' +
@@ -13,7 +16,6 @@ var htmlMenuAddition = '<div id="farRightColumn" class="column">' +
 '</div>'
 
 $("#footerLinks").append(htmlMenuAddition);
-
 
 function autoSwitch(varName) {
 	if (craftSteel == "false") {
@@ -44,6 +46,22 @@ game.updateModel = () => {
         if (i !== 0) {
             game.calendar.tick();
         }
+        game.realUpdateModel();
+    }
+}
+setSpeed = spd => {
+    if (spd >= 1) {
+        speed = spd;
+        updateSpeedText();
+    }
+}
+speedUp = () => setSpeed(speed * 2);
+slowDown = () => setSpeed(speed / 2);
+$("#timeSetting").remove();
+$('#gamePageContainer').append($('<div id="timeSetting" style="position: absolute; top: 50px; right: 10px;" onclick="event.preventDefault(); speedUp();" oncontextmenu="event.preventDefault(); slowDown();">'));
+updateSpeedText = () => $("#timeSetting").html("Speed: " + speed + "x" + (speed > 30 ? " <br />(right click<br />to lower)" : ""));
+updateSpeedText();
+
         game.realUpdateModel();
     }
 }
