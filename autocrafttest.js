@@ -22,7 +22,7 @@ function autoSwitch(varName) {
 		document.getElementById(varName).style.color = 'black';
 	} else if (craftSteel == "true") {
 		craftSteel = "false";
-		gamePage.msg('Auto' + craft Steel + ' is now off');
+		gamePage.msg('Auto' + 'craft Steel' + ' is now off');
 		document.getElementById(varName).style.color = 'red';
 	}
 }
