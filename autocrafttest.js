@@ -38,7 +38,7 @@ setInterval(function(){
 }, 1000); //repeat second
 
 //time function
-
+/*
 if (!window.speed) speed = 1;
 if (!game.realUpdateModel) game.realUpdateModel = game.updateModel;
 game.updateModel = () => {
@@ -77,3 +77,4 @@ $("#timeSetting").remove();
 $('#gamePageContainer').append($('<div id="timeSetting" style="position: absolute; top: 50px; right: 10px;" onclick="event.preventDefault(); speedUp();" oncontextmenu="event.preventDefault(); slowDown();">'));
 updateSpeedText = () => $("#timeSetting").html("Speed: " + speed + "x" + (speed > 30 ? " <br />(right click<br />to lower)" : ""));
 updateSpeedText();
+*/
