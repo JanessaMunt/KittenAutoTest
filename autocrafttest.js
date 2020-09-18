@@ -33,7 +33,7 @@ function autoSwitch(varName) {
 //autocraft steel
 setInterval(function(){
   if(craftSteel == true){
-    gamePage.craftAll("coal"); //craft all steel
+    gamePage.craftAll("steel"); //craft all steel
   }
 }, 1000); //repeat second
 
